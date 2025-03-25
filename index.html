@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epsilon Pi Club - Machine Learning Club of VBIT</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Epsilon Pi is the Machine Learning Club of VBIT, focusing on Machine Learning, Data Science, and Data Engineering.">
+    <meta name="keywords" content="Epsilon Pi, Machine Learning, Data Science, Data Engineering, VBIT">
+    <meta name="author" content="Epsilon Pi Club">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="./assets/logo_epi.png" alt="logo">
+            <img src="./assets/images/favic.png" alt="logo">
         </div>
         <div class="nav-links">
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
             <a href="#about">About</a>
             <a href="/team/">Team</a>
             <a href="#project">Projects</a>
@@ -37,7 +40,7 @@
         <div class="card">
             <img src="./assets/images/icons/python-icon.png" alt="Python">
             <h3>Python</h3>
-            <button class="btn">Explore</button>
+            <a href="/python/"><button class="btn">Explore</button></a>
         </div>
         <div class="card">
             <img src="assets/images/icons/ds-icon.png" alt="Data Science Icon">
@@ -78,19 +81,6 @@
         <p>© 2025 Epsilon Pi V. Vignana Bharathi Institute of Technology. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // Select the hamburger menu and the nav links
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        // Add a click event listener to the hamburger menu
-        hamburger.addEventListener('click', () => {
-            // Toggle the 'active' class on the nav links to show/hide them
-            navLinks.classList.toggle('active');
-
-            // Animate the hamburger icon (turn it into an "X" when menu is open)
-            hamburger.classList.toggle('toggle');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
