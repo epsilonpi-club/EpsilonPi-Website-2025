@@ -50,7 +50,7 @@
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
-    background-image: url("./bg.png");
+    background-image: url("assets/images/bg.png");
     background-size: contain;
     background-position: center;
     display: flex;
