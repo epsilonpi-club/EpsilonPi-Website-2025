@@ -1,0 +1,186 @@
+/* ##################################################### */
+/* Common CSS for python, ml and ds pages */
+
+/* Body styles remain unchanged */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-image: url('assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 60px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: -1;
+}
+
+/* Python Logo and Info Section (unchanged) */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 40px;
+    gap: 90px;
+    padding: 40px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.feature-logo {
+    width: 120px;
+    height: auto;
+}
+
+.intro-text {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .python-logo {
+        width: 80px;
+    }
+}
+
+/* Applications and Resources Titles - Increased Size */
+.applications h1,
+.resources h1 {
+    color: #FD03D7;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    font-family: Poppins, sans-serif; /* Corrected 'font: Poppins' syntax */
+    font-size: 56px; /* Increased from 48px to 56px */
+}
+
+/* Applications Grid */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns as in the image */
+    gap: 60px; /* Increased gap between boxes to match the image */
+    max-width: 1200px; /* Slightly wider to match the layout */
+    margin: auto;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .app-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 30px; /* Slightly smaller gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 20px; /* Even smaller gap for mobile */
+    }
+}
+/* Application Boxes */
+.app-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 11px;
+    border: 2px solid rgba(255, 64, 129, 0.8);
+    border-radius: 20px; /* Increased border-radius for more rounded corners */
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Blur effect inside the box */
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.2);
+    text-align: left;
+    width: 100%; /* Full width of grid cell */
+    max-width: 410px; /* Slightly wider to match the image */
+    height: 275px; /* Adjusted height to fit content better */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Icon styles */
+.app-box img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+}
+
+/* Title styles */
+.app-box h3 {
+    color: #D84DC9;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Paragraph styles */
+.app-box p {
+    font-size: 15px;
+    color: #d0d0d0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Poppins, sans-serif;
+}
+/* Resources Buttons Container */
+
+
+/* Resources Title (unchanged) */
+.resources h1 {
+    color: #FD03D7;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: Poppins, sans-serif;
+    font-size: 56px;
+    text-align: center;
+}
+
+/* Resources Buttons Container - Full Viewport Width */
+.resource-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px 0; /* Removed auto margins to allow full width */
+    padding: 0; /* Ensure no padding constrains the width */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Offset to stretch full width */
+    margin-right: -50vw; /* Offset to stretch full width */
+    gap: 25px; /* Space between buttons */
+}
+
+/* Resource Buttons - Reduced Width by 30px */
+.resource-buttons button {
+    width: calc(90% - 30px); /* Reduced width by 30px */
+    margin: 0 auto; /* Center the button within the container */
+    padding: 25px 20px; /* Kept padding for better text alignment */
+    background: #1a1a1a; /* Dark background */
+    border: none; /* Remove all borders */
+    border-left: 10px solid #FD04CB; /* Pink border only on the left */
+    border-radius: 10px; /* Rounded corners */
+    color: #FD04CB; /* White text */
+    cursor: pointer;
+    text-align: left; /* Text aligned to the left */
+    font-size: 25px;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
